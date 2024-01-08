@@ -1,0 +1,126 @@
+$color-primary: #ff8340;
+$color-secondary: #843500;
+$color-tertiary: #292929;
+$color-quaternary: #fff;
+
+@mixin text {
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 2px;
+  color: $color-tertiary;
+}
+
+@mixin text-s {
+  max-width: 587px;
+  margin: 0 auto;
+}
+
+@mixin link-header {
+  @include text;
+  text-decoration: none;
+}
+
+@mixin link {
+  display: block;
+  max-width: 233px;
+  margin-bottom: 11px;
+  text-align: center;
+  @include link-header;
+}
+
+@mixin link-s {
+  margin: 20px auto 0;
+  font-size: 16px;
+}
+
+@mixin flex-centre {
+  display: flex;
+  align-items: center;
+}
+
+@mixin title-s {
+  @include text;
+  text-align: center;
+}
+
+@mixin pseudo-color {
+  &:hover {
+    color: $color-primary;
+  }
+
+  &:active {
+    color: $color-secondary;
+  }
+}
+
+@mixin stripe {
+  width: 22px;
+  height: 3px;
+  background-color: $color-tertiary;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+
+  &::selection {
+    background: $color-primary;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial, sans-serif;
+}
+
+.cont {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.nav {
+  &__list {
+    display: flex;
+
+    &-link {
+      margin: 0 32px;
+      @include link-header;
+      @include pseudo-color;
+    }
+  }
+}
+
+.nav-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  border: 1px solid $color-tertiary;
+  border-radius: 4px;
+  background-color: $color-quaternary;
+
+  &__stripe {
+    position: relative;
+    @include stripe;
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      content: '';
+      @include stripe;
+    }
+
+    &::after {
+      position: absolute;
+      top: -10px;
+      content: '';
+      @include stripe;
+    }
+  }
+}
+
+.title {
+  font-size: clamp(60px, 4.2vw, 80px);
+  line-height: 90px;
+  color: $color-tertiary;
+}

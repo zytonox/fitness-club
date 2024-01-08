@@ -1,0 +1,43 @@
+.direction-wrapper {
+  background-color: $color-tertiary;
+
+  .direction {
+    position: relative;
+    padding: min(37.5vw, 491px) 0 0 calc(260px - (456px - min(23.95vw, 456px)));
+
+    @media screen and (max-width: 925px) {
+      padding: 20px;
+    }
+
+    &__title {
+      position: absolute;
+      top: calc(124px - (142px - min(7.459vw, 142px)));
+      line-height: min(8.82vw, 160px);
+      letter-spacing: min(0.32vw, 4px);
+      color: $color-quaternary;
+
+      @media screen and (max-width: 925px) {
+        position: relative;
+        top: 0;
+        margin-bottom: 20px;
+        @include title-s;
+        color: $color-quaternary;
+      }
+    }
+
+    &__desc {
+      position: absolute;
+      top: min(17.44vw, 318px);
+      max-width: clamp(888px, 78vw, 1400px);
+      @include text;
+      color: $color-quaternary;
+
+      @media screen and (max-width: 925px) {
+        position: relative;
+        top: 0;
+        @include text-s;
+        font-size: 16px;
+      }
+    }
+  }
+}

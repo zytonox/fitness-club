@@ -1,0 +1,24 @@
+.welcome {
+  padding-top: calc(115px - (124px - min(6.513vw, 124px)));
+
+  @media screen and (max-width: 925px) {
+    padding-top: 20px;
+  }
+
+  &__title {
+    margin: 0 0 clamp(28px, 2.48vw, 47px)
+      calc(260px - (456px - min(23.95vw, 456px)));
+    line-height: clamp(85px, 4.7vw, 90px);
+
+    @media screen and (max-width: 925px) {
+      margin: 0 0 20px;
+      padding: 20px;
+      @include title-s;
+    }
+  }
+
+  &__map {
+    height: calc(680px + (546px - min(28.675vw, 546px)));
+    vertical-align: middle;
+  }
+}

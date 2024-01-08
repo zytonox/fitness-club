@@ -1,0 +1,198 @@
+@mixin input {
+  padding: 16px 0 0 34px;
+  @include text;
+  border: 2px solid #cfcfcd;
+  background-color: $color-quaternary;
+
+  @media screen and (max-width: 925px) {
+    padding: 3px 0 0 6px;
+  }
+
+  &:focus {
+    outline-color: $color-tertiary;
+  }
+
+  &::placeholder {
+    color: #b0b0b0;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+@mixin input-s {
+  width: calc(680px - (492px - min(25.841vw, 492px)));
+  @include input;
+  padding-bottom: 15px;
+
+  @media screen and (max-width: 925px) {
+    width: min(46.2vw, 427px);
+    padding-bottom: 3px;
+  }
+}
+
+.inquire-wrapper {
+  background-color: $color-primary;
+
+  .inquire {
+    position: relative;
+    padding: min(3.361vw, 40px) calc(260px - (456px - min(23.95vw, 456px)))
+      calc(645px - (390px - clamp(124px, 20.489vw, 390px)));
+
+    @media screen and (max-width: 925px) {
+      padding: 20px;
+    }
+
+    &__title {
+      font-size: clamp(32px, 3.361vw, 45px);
+      line-height: calc(74px - (58px - min(3.046vw, 58px)));
+      text-align: center;
+      letter-spacing: min(0.168vw, 2.25px);
+
+      @media screen and (max-width: 925px) {
+        margin-bottom: 20px;
+        padding: 0;
+        @include title-s;
+      }
+
+      &::selection {
+        background: $color-quaternary;
+      }
+    }
+
+    &__stripe {
+      position: relative;
+      right: calc(10px - (20px - min(1.051vw, 20px)));
+      width: 64px;
+      height: 6px;
+      margin: calc(31px + (2px - min(0.104vw, 2px))) auto
+        clamp(48px, 5.042vw, 50px);
+      background: $color-tertiary;
+
+      @media screen and (max-width: 925px) {
+        display: none;
+      }
+    }
+
+    &__desc {
+      max-width: calc(1400px - (1024px - min(53.783vw, 1024px)));
+      margin-bottom: min(3.152vw, 40px);
+      @include text;
+      color: unset;
+
+      @media screen and (max-width: 925px) {
+        max-width: 587px;
+        margin: 0 auto 20px;
+        font-size: 16px;
+      }
+
+      &::selection {
+        background: $color-quaternary;
+      }
+    }
+
+    &__form {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      gap: min(2.101vw, 40px);
+      max-width: calc(1400px - (1024px - min(53.783vw, 1024px)));
+
+      @media screen and (max-width: 925px) {
+        position: relative;
+        max-width: min(46.2vw, 427px);
+        margin: 0 auto;
+      }
+
+      &-select-wrapper {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          inset: 8px 39px auto auto;
+          width: 22px;
+          height: 22px;
+          transform: rotate(45deg);
+          border: solid $color-quaternary;
+          border-width: 0 2.5px 2.5px 0;
+          content: '';
+
+          @media screen and (max-width: 925px) {
+            inset: 10px 13px auto auto;
+            width: 7px;
+            height: 7px;
+            border-width: 0 1px 1px 0;
+          }
+
+          @media screen and (max-width: 445px) {
+            content: unset;
+          }
+        }
+      }
+
+      &-select {
+        @include input-s;
+        padding: 18px 0 17px 34px;
+        color: $color-quaternary;
+        border: none;
+        background: $color-tertiary;
+        appearance: none;
+
+        @media screen and (max-width: 925px) {
+          padding: 5px 0 5px 6px;
+          font-size: 16px;
+        }
+        @media screen and (max-width: 445px) {
+          white-space: break-spaces;
+        }
+
+        &::-ms-expand {
+          display: none;
+        }
+      }
+
+      &-input {
+        @include input-s;
+
+        @media screen and (max-width: 925px) {
+          font-size: 16px;
+        }
+      }
+
+      &-message {
+        width: calc(1400px - (1024px - min(53.783vw, 1024px)));
+        height: 198px;
+        @include input;
+        resize: none;
+
+        @media screen and (max-width: 925px) {
+          width: min(46.2vw, 427px);
+          height: 100px;
+          font-size: 16px;
+        }
+      }
+
+      &-submit {
+        margin: calc(14px + (14px - min(0.734vw, 14px))) 0 11px auto;
+        padding: 0;
+        border: none;
+        background: none;
+        @include link-header;
+
+        @media screen and (max-width: 925px) {
+          margin: 0 auto;
+          font-size: 16px;
+        }
+
+        &:hover {
+          color: $color-quaternary;
+        }
+
+        &:active {
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+}

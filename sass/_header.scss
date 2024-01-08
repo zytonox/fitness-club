@@ -1,0 +1,32 @@
+.header {
+  position: fixed;
+  z-index: 4;
+  inset: 0 0 auto;
+  @include flex-centre;
+  justify-content: space-between;
+  padding: min(1.68vw, 30px) calc(260px - (456px - min(23.95vw, 456px)))
+    calc(10px - (20px - min(1.05vw, 20px)));
+
+  @media screen and (max-width: 1024px) {
+    align-items: initial;
+    padding: 16px 32px 0;
+  }
+
+  &__logo {
+    width: clamp(88px, 12.29vw, 182px);
+    height: clamp(48px, 6.72vw, 100px);
+  }
+
+  .nav {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .nav-toggle {
+    @media screen and (max-width: 1024px) {
+      @include flex-centre;
+      justify-content: center;
+    }
+  }
+}
