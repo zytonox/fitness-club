@@ -1,0 +1,123 @@
+@mixin titles {
+  margin-left: calc(54px - (58px - min(3.03vw, 58px)));
+  color: $color-tertiary;
+
+  @media screen and (max-width: 460px) {
+    max-width: unset;
+    margin: 0 20px;
+  }
+}
+
+@mixin swiper-button {
+  width: 150px;
+  height: clamp(628px, 65.96vw, 758px);
+  color: $color-primary;
+
+  @media screen and (max-width: 1152px) {
+    display: none;
+  }
+
+  &::after {
+    position: absolute;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+  }
+}
+
+.coaches {
+  padding-top: calc(140px - (280px - min(14.584vw, 280px)));
+
+  @media screen and (max-width: 1152px) {
+    padding-top: 0;
+  }
+
+  &__title {
+    margin: 0 0 calc(124px - (248px - min(12.917vw, 248px)))
+      calc(260px - (456px - min(23.95vw, 456px)));
+
+    @media screen and (max-width: 1152px) {
+      display: none;
+    }
+  }
+
+  .swiper {
+    &-wrapper {
+      @media screen and (max-width: 460px) {
+        text-align: center;
+      }
+    }
+
+    &-slide {
+      @media screen and (min-width: 461px) and (max-width: 1152px) {
+        filter: grayscale(1);
+
+        &:hover {
+          filter: none;
+        }
+
+        &-next {
+          filter: none;
+        }
+
+        &:hover + .swiper-slide {
+          filter: grayscale(1);
+        }
+
+        &:has(+ .swiper-slide:hover) {
+          filter: grayscale(1);
+        }
+      }
+
+      @media screen and (max-width: 460px) {
+        filter: none;
+      }
+
+      &__image {
+        height: clamp(628px, 65.96vw, 758px);
+
+        @media screen and (max-width: 768px) {
+          height: 758px;
+        }
+
+        @media screen and (max-width: 460px) {
+          height: 908px;
+        }
+      }
+
+      &__title {
+        max-width: 300px;
+        margin: clamp(8px, 0.58vw, 11px) 0 clamp(6px, 0.53vw, 10px);
+        font-size: clamp(37.272px, 2.35vw, 45px);
+        line-height: clamp(41.413px, 2.61vw, 50px);
+        @include titles;
+      }
+
+      &__subtitle {
+        margin-bottom: clamp(11px, 0.79vw, 15px);
+        font-size: clamp(16.565px, 1.1vw, 20px);
+        line-height: 23px;
+        letter-spacing: clamp(1.657px, 0.105vw, 2px);
+        @include titles;
+      }
+    }
+
+    &-button-next {
+      inset: 22px 0 auto auto;
+      background: linear-gradient(-90deg, #fff 0%, rgba(41, 41, 41, 0) 100%);
+      @include swiper-button;
+
+      &::after {
+        right: 34px;
+      }
+    }
+
+    &-button-prev {
+      inset: 22px auto auto 0;
+      background: linear-gradient(90deg, #fff 0%, rgba(41, 41, 41, 0) 100%);
+      @include swiper-button;
+
+      &::after {
+        left: 34px;
+      }
+    }
+  }
+}

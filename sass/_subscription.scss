@@ -1,0 +1,239 @@
+.subs {
+  padding: calc(140px - (174px - min(9.139vw, 174px)))
+    calc(266px - (458px - clamp(229px, 24.055vw, 458px))) 0
+    calc(260px - (458px - clamp(229px, 24.055vw, 458px)));
+
+  @media screen and (max-width: 1600px) {
+    padding: calc(140px - (174px - min(9.139vw, 174px))) 0 0;
+  }
+
+  @media screen and (max-width: 925px) {
+    padding: 20px 0 0;
+  }
+
+  &__title {
+    margin-bottom: 53px;
+
+    @media screen and (max-width: 1600px) {
+      margin-left: calc(260px - (458px - clamp(229px, 24.055vw, 458px)));
+    }
+
+    @media screen and (max-width: 925px) {
+      margin: 0 0 20px;
+      font-size: 25px;
+      line-height: unset;
+      text-align: center;
+    }
+  }
+
+  &__card-cont {
+    @include flex-centre;
+    justify-content: space-between;
+    height: 686px;
+    text-align: center;
+
+    @media screen and (max-width: 1600px) {
+      flex-direction: column;
+      align-items: unset;
+      height: auto;
+    }
+  }
+
+  &__card {
+    @include flex-centre;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 69px 0 26px;
+    box-shadow: 6px 6px $color-tertiary, 6px 6px inset $color-tertiary,
+      6px 0 $color-tertiary, 0 6px $color-tertiary;
+    transition: all 0.3s;
+
+    @media screen and (max-width: 1600px) {
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 0 calc(266px - (458px - clamp(229px, 24.055vw, 458px))) 0
+        calc(260px - (458px - clamp(229px, 24.055vw, 458px)));
+      padding: 62.25px 0 56.25px;
+    }
+
+    @media screen and (max-width: 925px) {
+      padding: 26px 0 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      padding: 26px 20px 20px;
+    }
+
+    &:hover {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 4px;
+      padding-bottom: 88px;
+      box-shadow: 6px 6px $color-primary, 6px 6px inset $color-primary,
+        6px 0 $color-primary, 0 6px $color-primary;
+
+      @media screen and (max-width: 1600px) {
+        margin: 0 calc(256px - (458px - clamp(229px, 24.055vw, 458px))) 0
+          calc(250px - (458px - clamp(229px, 24.055vw, 458px)));
+        padding: 67.25px 0 61.25px;
+      }
+
+      @media screen and (max-width: 925px) {
+        padding: 31px 0 25px;
+      }
+
+      @media screen and (max-width: 700px) {
+        padding: 31px 20px 25px;
+      }
+    }
+
+    &:nth-child(4) {
+      @media screen and (max-width: 1600px) {
+        margin-bottom: 38px;
+      }
+
+      @media screen and (max-width: 925px) {
+        margin-bottom: 26px;
+      }
+    }
+
+    &:hover + & {
+      @media screen and (max-width: 1600px) {
+        padding-top: 52.25px;
+      }
+
+      @media screen and (max-width: 925px) {
+        padding-top: 16px;
+      }
+    }
+
+    &:has(+ &:nth-child(4):hover) {
+      @media screen and (max-width: 1600px) {
+        padding-bottom: 46.25px;
+      }
+
+      @media screen and (max-width: 925px) {
+        padding-bottom: 10px;
+      }
+    }
+
+    &-period {
+      @include flex-centre;
+      flex-direction: column;
+
+      @media screen and (max-width: 1600px) {
+        min-width: 119px;
+      }
+
+      @media screen and (max-width: 925px) {
+        margin: 0 20px;
+      }
+
+      @media screen and (max-width: 700px) {
+        margin: 0 0 20px;
+      }
+    }
+
+    &-circle {
+      width: 76px;
+      height: 76px;
+      margin: 0 114px 24px;
+      border: 4px solid $color-tertiary;
+      border-radius: 50%;
+      transition: all 0.3s;
+
+      @media screen and (max-width: 1600px) {
+        margin: 0 0 24px;
+      }
+
+      @media screen and (max-width: 925px) {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &:hover &-circle {
+      margin: 0 134px 24px;
+      border: 4px solid $color-primary;
+
+      @media screen and (max-width: 1600px) {
+        margin: 0 0 24px;
+      }
+
+      @media screen and (max-width: 925px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-number {
+      position: relative;
+      inset: 8px 1px auto auto;
+      font: 40px/46px Arial, sans-serif;
+
+      @media screen and (max-width: 925px) {
+        font-size: 20px;
+        line-height: unset;
+      }
+    }
+
+    &-month {
+      @include text;
+      font-family: Arial, sans-serif;
+      line-height: 28px;
+      letter-spacing: 1px;
+    }
+
+    &-desc {
+      max-width: 234px;
+      margin: 74px 0 36px;
+      color: unset;
+      @include title-s;
+
+      @media screen and (max-width: 1600px) {
+        max-width: clamp(306px, 32.142vw, 635px);
+        margin: 0;
+      }
+
+      @media screen and (max-width: 700px) {
+        max-width: unset;
+      }
+    }
+
+    &-buy {
+      @media screen and (max-width: 1600px) {
+        @include flex-centre;
+        flex-direction: column;
+        width: 221px;
+      }
+
+      @media screen and (max-width: 925px) {
+        margin: 0 20px;
+      }
+
+      @media screen and (max-width: 700px) {
+        margin: 20px 0 0;
+      }
+    }
+
+    &-price {
+      margin-bottom: 27px;
+      font: 45px/63px Arial, sans-serif;
+      letter-spacing: 2.25px;
+      color: $color-tertiary;
+
+      @media screen and (max-width: 925px) {
+        margin-bottom: 20px;
+        font-size: 25px;
+        line-height: unset;
+        letter-spacing: unset;
+      }
+    }
+
+    &-link {
+      @include link;
+      @include pseudo-color;
+    }
+  }
+}

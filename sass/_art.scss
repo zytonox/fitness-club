@@ -1,0 +1,77 @@
+.art {
+  position: relative;
+  padding: clamp(817px, 50.7vw, 973px) 0 0
+    calc(260px - (456px - min(23.95vw, 456px)));
+
+  @media screen and (max-width: 925px) {
+    padding: 20px;
+    border: 6px solid $color-primary;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 3;
+    top: calc(169px - (208px - min(10.93vw, 208px)));
+    max-width: min(70.2vw, 1346px);
+    line-height: min(7.36vw, 90px);
+
+    @media screen and (max-width: 925px) {
+      position: relative;
+      top: 0;
+      max-width: 1346px;
+      @include title-s;
+    }
+  }
+
+  &__desc-cont {
+    position: absolute;
+    z-index: 2;
+    inset: calc(72px - (112px - min(5.88vw, 112px)))
+      calc(895px - (1128px - min(59.24vw, 1128px))) auto auto;
+    max-width: min(52.94vw, 562px);
+    padding: min(29vw, 329px) calc(11px + (57px - min(3vw, 57px)))
+      calc(40px - (52px - min(2.73vw, 52px))) calc(75px - min(5.1vw, 50px));
+    border: 6px solid $color-primary;
+
+    @media screen and (max-width: 925px) {
+      position: relative;
+      inset: 0 auto auto 0;
+      @include text-s;
+      padding: 20px 0 0;
+      border: none;
+    }
+  }
+
+  &__desc {
+    @include text;
+    letter-spacing: min(0.17vw, 2px);
+    color: unset;
+
+    @media screen and (max-width: 925px) {
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__desc-link {
+    margin-top: calc(25px + (44px - min(2.3vw, 44px)));
+    @include link;
+
+    @media screen and (max-width: 925px) {
+      @include link-s;
+    }
+
+    @include pseudo-color;
+  }
+
+  &__image {
+    position: absolute;
+    inset: auto calc(105px - (210px - min(11vw, 210px))) 0 auto;
+    width: clamp(598px, 50vw, 953px);
+    height: clamp(374px, 31.1vw, 596px);
+
+    @media screen and (max-width: 925px) {
+      display: none;
+    }
+  }
+}

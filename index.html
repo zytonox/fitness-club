@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport"
+    />
+    <title>Фитнес-клуб</title>
+    <link
+      href="./favicon.ico"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./styles/reset.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./styles/fonts.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./styles/style.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="cont header">
+      <img
+        alt="Логотип"
+        class="header__logo"
+        src="./images/logo.png"
+      />
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a
+              class="nav__list-link"
+              href=""
+            >
+              О НАС
+            </a>
+          </li>
+
+          <li class="nav__list-item">
+            <a
+              class="nav__list-link"
+              href=""
+            >
+              ТРЕНЕРЫ
+            </a>
+          </li>
+
+          <li class="nav__list-item">
+            <a
+              class="nav__list-link"
+              href=""
+            >
+              АБОНЕМЕНТЫ
+            </a>
+          </li>
+
+          <li class="nav__list-item">
+            <a
+              class="nav__list-link"
+              href=""
+            >
+              КОНТАКТЫ
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-toggle">
+        <div class="nav-toggle__stripe"></div>
+      </div>
+    </header>
+
+    <div class="main-wrapper">
+      <main class="cont main">
+        <h2 class="main__title">ПОСТРОЙ СВОЕ ТЕЛО</h2>
+
+        <img
+          alt="Мужчина"
+          class="main__image"
+          src="./images/man.png"
+        />
+
+        <div class="main__desc-cont">
+          <p class="main__desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <a
+            class="main__desc-link"
+            href=""
+          >
+            ЧИТАТЬ ДАЛЕЕ
+          </a>
+        </div>
+      </main>
+    </div>
+
+    <section class="cont art">
+      <h2 class="title art__title">ТВОЕ ТЕЛО - ПРОИЗВЕДЕНИЕ ИСКУССТВА</h2>
+
+      <div class="art__desc-cont">
+        <p class="art__desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <a
+          class="art__desc-link"
+          href=""
+        >
+          ЧИТАТЬ ДАЛЕЕ
+        </a>
+      </div>
+
+      <img
+        alt="Девушка"
+        class="art__image"
+        src="./images/woman.jpg"
+      />
+    </section>
+
+    <div class="direction-wrapper">
+      <section class="cont direction">
+        <h2 class="title direction__title">ВЕРНОЕ НАПРАВЛЕНИЕ</h2>
+
+        <p class="direction__desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </section>
+    </div>
+
+    <div class="inquire-wrapper">
+      <section class="cont inquire">
+        <h2 class="title inquire__title">СВЯЖИТЕСЬ С НАМИ</h2>
+
+        <div class="inquire__stripe"></div>
+
+        <p class="inquire__desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <form class="inquire__form">
+          <div class="inquire__form-select-wrapper">
+            <select
+              aria-label=""
+              class="inquire__form-select"
+              name="select"
+            >
+              <option class="inquire__form-item">Категория вопроса</option>
+
+              <option class="inquire__form-item">Категория вопроса</option>
+
+              <option class="inquire__form-item">Категория вопроса</option>
+            </select>
+          </div>
+
+          <input
+            aria-label=""
+            class="inquire__form-input"
+            name="text"
+            placeholder="Ваше имя"
+            type="text"
+          />
+
+          <input
+            aria-label=""
+            autocomplete="on"
+            class="inquire__form-input"
+            name="tel"
+            placeholder="Телефон"
+            type="tel"
+          />
+
+          <input
+            aria-label=""
+            autocomplete="on"
+            class="inquire__form-input"
+            name="email"
+            placeholder="E-mail"
+            type="email"
+          />
+
+          <textarea
+            aria-label=""
+            class="inquire__form-message"
+            name="message"
+            placeholder="Текст сообщения"
+          ></textarea>
+
+          <button class="inquire__form-submit">ЗАКАЗАТЬ ЗВОНОК</button>
+        </form>
+      </section>
+    </div>
+
+    <section class="cont system">
+      <div class="system__grid">
+        <div class="system__desc-cont">
+          <h2 class="title system__desc-title">СИСТЕМА</h2>
+
+          <p class="system__desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
+          </p>
+        </div>
+
+        <div class="system__card">
+          <img
+            alt="Питание"
+            class="system__card-image"
+            src="./images/nutrition.png"
+          />
+
+          <h2 class="system__card-title">ПИТАНИЕ</h2>
+
+          <p class="system__card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <div class="system__card">
+          <img
+            alt="Режим"
+            class="system__card-image"
+            src="./images/routine.png"
+          />
+
+          <h2 class="system__card-title">РЕЖИМ</h2>
+
+          <p class="system__card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <div class="system__card">
+          <img
+            alt="Программа"
+            class="system__card-image"
+            src="./images/program.png"
+          />
+
+          <h2 class="system__card-title">ПРОГРАММА</h2>
+
+          <p class="system__card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <div class="system__image"></div>
+      </div>
+    </section>
+
+    <section class="cont coaches">
+      <h2 class="title coaches__title">ТРЕНЕРСКИЙ СОСТАВ</h2>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              alt="Борис Бритва"
+              class="swiper-slide__image"
+              src="./images/boris.jpg"
+            />
+            <h2 class="swiper-slide__title">БОРИС БРИТВА</h2>
+            <p class="swiper-slide__subtitle">Персональный наебщик</p>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              alt="Джесс Паркер"
+              class="swiper-slide__image"
+              src="images/coach-1.jpg"
+            />
+
+            <h2 class="swiper-slide__title">ДЖЕСС ПАРКЕР</h2>
+
+            <p class="swiper-slide__subtitle">Персональный тренер</p>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              alt="Сара Коннор"
+              class="swiper-slide__image"
+              src="images/coach-2.jpg"
+            />
+
+            <h2 class="swiper-slide__title">САРА КОННОР</h2>
+
+            <p class="swiper-slide__subtitle">Персональный тренер</p>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              alt="Орландо Блум"
+              class="swiper-slide__image"
+              src="images/coach-3.jpg"
+            />
+
+            <h2 class="swiper-slide__title">ОРЛАНДО БЛУМ</h2>
+
+            <p class="swiper-slide__subtitle">Персональный тренер</p>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              alt="Алек Болдуин"
+              class="swiper-slide__image"
+              src="images/coach-4.jpg"
+            />
+
+            <h2 class="swiper-slide__title">АЛЕК БОЛДУИН</h2>
+
+            <p class="swiper-slide__subtitle">Персональный тренер</p>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              alt="Терми Натор"
+              class="swiper-slide__image"
+              src="images/coach-5.jpg"
+            />
+
+            <h2 class="swiper-slide__title">ТЕРМИ НАТОР</h2>
+
+            <p class="swiper-slide__subtitle">Персональный тренер</p>
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              alt="Кирпич"
+              class="swiper-slide__image"
+              src="./images/brick.jpg"
+            />
+
+            <h2 class="swiper-slide__title">Кирпич</h2>
+
+            <p class="swiper-slide__subtitle">Свинопас</p>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script src="./swiper.js"></script>
+    </section>
+
+    <section class="cont subs">
+      <h2 class="title subs__title">АБОНЕМЕНТ</h2>
+
+      <div class="subs__card-cont">
+        <div class="subs__card">
+          <div class="subs__card-period">
+            <div class="subs__card-circle">
+              <p class="subs__card-number">1</p>
+            </div>
+
+            <p class="subs__card-month">МЕСЯЦ</p>
+          </div>
+
+          <p class="subs__card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <div class="subs__card-buy">
+            <p class="subs__card-price">2 000 ₽</p>
+
+            <a
+              class="subs__card-link"
+              href=""
+              >КУПИТЬ
+            </a>
+          </div>
+        </div>
+
+        <div class="subs__card">
+          <div class="subs__card-period">
+            <div class="subs__card-circle">
+              <p class="subs__card-number">3</p>
+            </div>
+
+            <p class="subs__card-month">МЕСЯЦА</p>
+          </div>
+
+          <p class="subs__card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <div class="subs__card-buy">
+            <p class="subs__card-price">5 200 ₽</p>
+
+            <a
+              class="subs__card-link"
+              href=""
+              >КУПИТЬ
+            </a>
+          </div>
+        </div>
+
+        <div class="subs__card">
+          <div class="subs__card-period">
+            <div class="subs__card-circle">
+              <p class="subs__card-number">6</p>
+            </div>
+
+            <p class="subs__card-month">МЕСЯЦЕВ</p>
+          </div>
+
+          <p class="subs__card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <div class="subs__card-buy">
+            <p class="subs__card-price">10 000 ₽</p>
+
+            <a
+              class="subs__card-link"
+              href=""
+            >
+              КУПИТЬ
+            </a>
+          </div>
+        </div>
+
+        <div class="subs__card">
+          <div class="subs__card-period">
+            <div class="subs__card-circle">
+              <p class="subs__card-number">12</p>
+            </div>
+
+            <p class="subs__card-month">МЕСЯЦЕВ</p>
+          </div>
+
+          <p class="subs__card-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <div class="subs__card-buy">
+            <p class="subs__card-price">20 000 ₽</p>
+
+            <a
+              class="subs__card-link"
+              href=""
+            >
+              КУПИТЬ
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="welcome">
+      <h2 class="title welcome__title">ДОБРО ПОЖАЛОВАТЬ!</h2>
+
+      <iframe
+        class="welcome__map"
+        height="680"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaf4cc6b118639582bd2479aa4996133ef0c8620bc80a7a4b143974d6952facfd&amp;source=constructor"
+        width="100%"
+      ></iframe>
+    </section>
+
+    <footer class="cont footer">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a
+              class="nav__list-link"
+              href=""
+            >
+              О НАС
+            </a>
+          </li>
+
+          <li class="nav__list-item">
+            <a
+              class="nav__list-link"
+              href=""
+            >
+              ТРЕНЕРЫ
+            </a>
+          </li>
+
+          <li class="nav__list-item">
+            <a
+              class="nav__list-link"
+              href=""
+            >
+              АБОНЕМЕНТЫ
+            </a>
+          </li>
+
+          <li class="nav__list-item">
+            <a
+              class="nav__list-link"
+              href=""
+            >
+              КОНТАКТЫ
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-toggle">
+        <div class="nav-toggle__stripe"></div>
+      </div>
+
+      <a
+        class="footer__link"
+        href=""
+      >
+        blvckdesign
+      </a>
+
+      <p class="footer__year">2023</p>
+    </footer>
+  </body>
+</html>

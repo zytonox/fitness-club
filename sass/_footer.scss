@@ -1,0 +1,38 @@
+.footer {
+  padding: 57px 0 23px;
+
+  @media screen and (max-width: 925px) {
+    padding: 20px 0 20px;
+  }
+
+  .nav {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 925px) {
+      display: none;
+    }
+
+    &__list {
+      justify-content: space-between;
+    }
+  }
+
+  .nav-toggle {
+    @media screen and (max-width: 925px) {
+      @include flex-centre;
+      justify-content: center;
+      margin: 0 32px 20px auto;
+    }
+  }
+
+  &__link {
+    margin: 66px auto 0;
+    @include link;
+    @include pseudo-color;
+  }
+
+  &__year {
+    @include title-s;
+  }
+}
